@@ -14,7 +14,7 @@
 include parameters.mk
 include app_path.mk
 HB_HAMMERBENCH_PATH:=$(shell git rev-parse --show-toplevel)
-override BSG_MACHINE_PATH = $(REPLICANT_PATH)/machines/pod_X1Y1_ruche_X4Y2_hbm_one_pseudo_channel 
+override BSG_MACHINE_PATH = $(REPLICANT_PATH)/machines/pod_X1Y1_ruche_X$(tile-x)Y$(tile-y)_hbm_one_pseudo_channel 
 include $(HB_HAMMERBENCH_PATH)/mk/environment.mk
 
 ###############################################################################
@@ -25,8 +25,8 @@ include parameters.mk
 include app_path.mk
 
 # Tile Group Dimensions
-TILE_GROUP_DIM_X ?= 4
-TILE_GROUP_DIM_Y ?= 2
+TILE_GROUP_DIM_X = $(tile-x)
+TILE_GROUP_DIM_Y = $(tile-y)
 
 vpath %.c   $(APP_PATH)
 vpath %.cpp $(APP_PATH)
