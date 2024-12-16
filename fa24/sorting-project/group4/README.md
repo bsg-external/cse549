@@ -7,6 +7,8 @@ Shreya Mahetaliya, Divya Naidu
 The geometric mean is approximately 5,424,915 cycles.
 
 Speedup over current leader Geomean: 386,241/5,424,915 = 0.0712X SpeedUp
+
+
 Optimized the previous code version to enhance performance and efficiency. which was approx (5,800,000 cycles)
 
 
